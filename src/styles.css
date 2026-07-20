@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* ── Neutrales (stone) ───────────────────────── */
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+  --stone-950: #0c0a09;
+
+  /* ── primary — Content Machine) ────────── */
+  --olive-50: #f7f9ee;
+  --olive-100: #ecf0d3;
+  --olive-200: #d5dfa6;
+  --olive-300: #b8c97a;
+  --olive-400: #9eb558;
+  --olive-500: #859b3f; /* primary */
+  --olive-600: #687a30;
+  --olive-700: #4d5a23;
+  --olive-800: #353e18;
+  --olive-900: #20260e;
+
+  /* ── Background - dark  ───────────── */
+  --navy-900: #0c1220; /* card / sidebar */
+  --navy-800: #0f1928; /* dashboard background */
+  --navy-700: #15202f; /* muted */
+  --navy-600: #202a3c; /* border */
+  --navy-300: #98b1b3; /* muted text */
+
+  /* ── States ── */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* -- Semantic -- */
+
+  --background: #ffffff;
+  --foreground: var(--stone-950);
+  --muted: var(--stone-100);
+  --muted-foreground: var(--stone-500);
+  --card: #ffffff;
+  --border: var(--stone-200);
+  --primary: var(--olive-500);
+  --primary-foreground: #ffffff;
+  --ring: var(--olive-500);
+  --sidebar: var(--stone-50);
+  --sidebar-active: var(--stone-200);
+
+  /* -- Categories -- */
+  --cat-olive: #859b3f;
+  --cat-teal: #3b9094;
+  --cat-pink: #ff5c8f;
+  --cat-blue: #3b82f6;
+  --cat-amber: #f59e0b;
+  --cat-red: #ef4444;
+  --cat-violet: #8b5cf6;
+  --cat-stone: #78716c;
+
+  /* Font Size */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 24px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* shadows */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 10%);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 12%);
+}
+
+.dark {
+  --background: var(--navy-800);
+  --foreground: #fafaf9;
+  --muted: var(--navy-700);
+  --muted-foreground: var(--navy-300);
+  --card: var(--navy-900);
+  --border: var(--navy-600);
+  --sidebar: var(--navy-900);
+  --sidebar-active: var(--navy-600);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

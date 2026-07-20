@@ -1,0 +1,49 @@
+aside {
+  gap: 1rem;
+  width: 16rem;
+  display: flex;
+  padding: 1rem;
+  min-height: 100vh;
+  align-items: stretch;
+  flex-direction: column;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-direction: column;
+}
+
+a {
+  gap: var(--spacing-md);
+  display: flex;
+  align-items: center;
+
+  padding: 8px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: var(--font-sm);
+  border-radius: var(--radius-md);
+}
+
+a.active {
+  background: var(--sidebar-active);
+}
+
+a:hover {
+  background: var(--sidebar-active);
+}
+
+.theme-button {
+  padding: 6px;
+  cursor: pointer;
+  min-height: 20px;
+  color: var(--foreground);
+  background: var(--background);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,14 @@
+<aside>
+  <nav>
+    @for (route of routes; track route.to) {
+      <a [routerLink]="route.to" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <ng-icon [name]="route.icon" aria-hidden="true"></ng-icon>
+        <label>{{ route.label }}</label>
+      </a>
+    }
+  </nav>
+
+  <button ngpButton class="theme-button" type="button" (click)="themeService.toggleTheme()">
+    <ng-icon [name]="themeService.theme() === 'light' ? 'heroMoon' : 'heroSun'" />
+  </button>
+</aside>

@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+section {
+  flex: 1;
+  padding: 18px;
+}
