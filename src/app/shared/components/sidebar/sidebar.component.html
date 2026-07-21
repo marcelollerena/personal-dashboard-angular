@@ -1,7 +1,12 @@
 <aside>
   <nav>
     @for (route of routes; track route.to) {
-      <a [routerLink]="route.to" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <a
+        [routerLink]="route.to"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        [routerLinkActiveOptions]="{ exact: route.to === '/' }"
+      >
         <ng-icon [name]="route.icon" aria-hidden="true"></ng-icon>
         <label>{{ route.label }}</label>
       </a>

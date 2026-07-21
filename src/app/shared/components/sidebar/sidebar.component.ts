@@ -6,7 +6,7 @@ import { NgpButton } from 'ng-primitives/button';
 import { heroSun, heroMoon, heroSquares2x2, heroHome } from '@ng-icons/heroicons/outline';
 
 import { appRoutes } from './constants/routes.constants';
-import { ThemeService } from '../../services/theme/theme.service';
+import { ThemeService } from '@shared/services/theme/theme.service';
 
 @Component({
   selector: 'sidebar-component',
