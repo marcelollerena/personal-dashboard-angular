@@ -5,7 +5,7 @@ export const appRoutes = [
     icon: 'heroHome',
   },
   {
-    to: '/kanban',
+    to: 'kanban',
     label: 'Board',
     icon: 'heroSquares2x2',
   },
