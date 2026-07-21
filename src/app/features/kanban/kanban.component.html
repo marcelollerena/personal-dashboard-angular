@@ -1,3 +1,11 @@
-<main>
-  <h1>Kanban page !!</h1>
-</main>
+<section class="kanban-layout">
+  <header class="kanban-toolbar">
+    <label> Board. 4 tasks</label>
+
+    <create-task-component></create-task-component>
+  </header>
+
+  <main class="kanban-board">
+    <router-outlet></router-outlet>
+  </main>
+</section>
