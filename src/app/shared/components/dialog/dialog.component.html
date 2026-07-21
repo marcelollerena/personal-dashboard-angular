@@ -1,0 +1,18 @@
+<button-component size="md" [ngpDialogTrigger]="dialog">
+  <ng-content select="[dialogTriggerButtonIcon]" />
+  {{ buttonTrigger() }}
+</button-component>
+<ng-template #dialog let-close="close">
+  <div ngpDialogOverlay>
+    <div ngpDialog>
+      <h1 ngpDialogTitle>{{ dialogTitle() }}</h1>
+      <p ngpDialogDescription>
+        <ng-content select="[dialogDescription]" />
+      </p>
+      <div class="dialog-footer">
+        <button-component size="md" (click)="close()" ngpButton>Cancel</button-component>
+        <button-component size="md" (click)="close()" ngpButton>Confirm</button-component>
+      </div>
+    </div>
+  </div>
+</ng-template>
