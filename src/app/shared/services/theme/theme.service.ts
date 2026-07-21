@@ -1,5 +1,6 @@
 import { effect, Injectable, Renderer2, RendererFactory2, signal } from '@angular/core';
-import { StoredTheme, Theme } from '../../types/theme/theme.types';
+
+import { StoredTheme, Theme } from '@shared/types/theme/theme.types';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
