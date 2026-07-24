@@ -1,7 +1,8 @@
 import { RouterOutlet } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 
 import { CreateTaskComponent } from './components/dialogs/create-task/create-task.component';
+import { TaskService } from './services/task.service';
 
 @Component({
   selector: 'kanban-component',
@@ -10,6 +11,8 @@ import { CreateTaskComponent } from './components/dialogs/create-task/create-tas
   imports: [RouterOutlet, CreateTaskComponent],
 })
 export class KanbanComponent implements OnInit {
+  readonly taskService = inject(TaskService);
+
   constructor() {}
 
   ngOnInit() {}

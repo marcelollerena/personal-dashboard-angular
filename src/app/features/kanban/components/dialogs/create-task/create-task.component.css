@@ -1,0 +1,132 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.date-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.form-field label {
+  font-size: var(--font-sm);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--muted);
+  color: var(--foreground);
+  background-color: var(--background);
+  outline: none;
+}
+
+.form-field input {
+  min-height: 38px;
+}
+
+.form-field textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  opacity: 0.5;
+  font-weight: 100;
+  font-size: var(--font-sm);
+}
+
+.option-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.option-field > label {
+  font-size: var(--font-sm);
+}
+
+.category-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.category-options [ngpRadioItem] {
+  --category-color: var(--cat-olive);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 30px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted-foreground);
+  background-color: var(--background);
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: var(--font-sm);
+}
+
+.category-options [ngpRadioItem][data-checked] {
+  color: var(--category-color);
+  background-color: color-mix(in srgb, var(--category-color) 12%, transparent);
+  border-color: var(--category-color);
+}
+
+.category-options [ngpRadioIndicator] {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background-color: var(--category-color);
+}
+
+.status-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--background);
+}
+
+.status-options [ngpRadioItem] {
+  min-height: 34px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--muted-foreground);
+  background-color: transparent;
+
+  font-weight: 400;
+  font-size: var(--font-sm);
+  cursor: pointer;
+}
+
+.status-options [ngpRadioItem][data-checked] {
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+}
+
+.status-options [ngpRadioIndicator] {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}

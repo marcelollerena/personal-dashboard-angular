@@ -26,7 +26,7 @@ import { heroPlus } from '@ng-icons/heroicons/outline';
   ],
   providers: [provideIcons({ heroPlus })],
 })
-export default class DialogComponent {
+export class DialogComponent {
   readonly buttonTrigger = input('Open Dialog');
   readonly dialogTitle = input('Dialog Title');
 }

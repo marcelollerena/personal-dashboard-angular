@@ -15,9 +15,10 @@
 }
 
 [ngpDialog] {
-  background-color: var(--navy-800);
+  min-width: 460px;
   padding: 24px;
   border-radius: 0.875rem;
+  background-color: var(--background);
   border: 1px solid var(--border);
   box-shadow: var(--ngp-shadow-lg);
   animation: slideIn 300ms cubic-bezier(0.4, 0, 0.2, 1);

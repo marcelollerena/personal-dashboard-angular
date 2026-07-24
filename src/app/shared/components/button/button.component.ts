@@ -14,6 +14,8 @@ export class ButtonComponent implements OnInit {
 
   readonly size = input<ButtonSize>('md');
   readonly type = input<ButtonType>('button');
+  readonly variant = input<ButtonVariant>('primary');
+  readonly compact = input<boolean>(false);
   readonly disabled = input<boolean>(false);
   readonly ariaLabel = input<string | null>(null);
 }

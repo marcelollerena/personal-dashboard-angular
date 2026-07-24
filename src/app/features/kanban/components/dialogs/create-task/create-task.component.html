@@ -1,5 +1,84 @@
 <dialog-component dialogTitle="New Task" buttonTrigger="New task">
   <ng-icon name="heroPlus" dialogTriggerButtonIcon></ng-icon>
 
-  <span dialogDescription>Create a task for this board.</span>
+  <form class="task-form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+    <div ngpFormField class="form-field">
+      <label ngpLabel>Title</label>
+      <input ngpInput placeholder="What needs doing?" formControlName="title" />
+    </div>
+
+    <div ngpFormField class="form-field">
+      <label ngpLabel>Description</label>
+      <textarea
+        ngpTextarea
+        placeholder="Details, context, subtasks..."
+        formControlName="description"
+      ></textarea>
+    </div>
+
+    <div class="date-fields">
+      <div ngpFormField class="form-field">
+        <label ngpLabel>Start Date</label>
+        <input ngpInput type="date" formControlName="startDate" />
+      </div>
+
+      <div ngpFormField class="form-field">
+        <label ngpLabel>Due Date</label>
+        <input ngpInput type="date" formControlName="dueDate" />
+      </div>
+    </div>
+
+    <div class="option-field">
+      <label ngpLabel>Category</label>
+      <div
+        class="category-options"
+        ngpRadioGroup
+        [ngpRadioGroupValue]="form.controls.category.value"
+        (ngpRadioGroupValueChange)="setCategory($event)"
+      >
+        @for (category of categories; track category.value) {
+          <button
+            type="button"
+            ngpRadioItem
+            class="category-option"
+            [style.--category-color]="getCategoryColor(category.color)"
+            [ngpRadioItemValue]="category.value"
+          >
+            <span ngpRadioIndicator></span>
+            {{ category.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="option-field">
+      <label ngpLabel>Status</label>
+      <div
+        class="status-options"
+        ngpRadioGroup
+        [ngpRadioGroupValue]="form.controls.status.value"
+        (ngpRadioGroupValueChange)="setStatus($event)"
+      >
+        @for (status of statuses; track status.value) {
+          <button type="button" ngpRadioItem [ngpRadioItemValue]="status.value">
+            <span ngpRadioIndicator></span>
+            {{ status.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button-component
+        size="md"
+        type="button"
+        variant="secondary"
+        [compact]="true"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button-component>
+      <button-component size="md" type="submit" [compact]="true">Save</button-component>
+    </div>
+  </form>
 </dialog-component>

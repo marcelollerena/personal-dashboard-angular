@@ -6,13 +6,10 @@
   <div ngpDialogOverlay>
     <div ngpDialog>
       <h1 ngpDialogTitle>{{ dialogTitle() }}</h1>
-      <p ngpDialogDescription>
+      <div ngpDialogDescription>
         <ng-content select="[dialogDescription]" />
-      </p>
-      <div class="dialog-footer">
-        <button-component size="md" (click)="close()" ngpButton>Cancel</button-component>
-        <button-component size="md" (click)="close()" ngpButton>Confirm</button-component>
       </div>
+      <ng-content />
     </div>
   </div>
 </ng-template>

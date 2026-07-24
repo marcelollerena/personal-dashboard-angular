@@ -3,14 +3,23 @@
   align-items: center;
   justify-content: center;
 
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   min-width: 120px;
   border-radius: var(--radius-md);
-  background-color: var(--primary);
-  color: var(--primary-foreground);
 
   font-weight: 500;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.button--secondary {
+  background-color: var(--background);
+  border-color: var(--border);
+  color: var(--foreground);
 }
 
 .button__label {
@@ -28,11 +37,15 @@
 .button--md {
   font-size: var(--font-sm);
   min-height: 40px;
-  padding: 8px 16px;
+  padding: 8px 18px;
 }
 
 .button--lg {
   font-size: var(--font-base);
   min-height: 48px;
   padding: 12px 20px;
+}
+
+.button--compact {
+  min-width: auto;
 }
